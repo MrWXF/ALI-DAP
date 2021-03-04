@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ALI-DAP-NACOS</artifactId>
+    <artifactId>ALI-DAP-CONFIG</artifactId>
 
     <dependencies>
         <dependency>
@@ -29,4 +29,5 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
     </dependencies>
+
 </project>
