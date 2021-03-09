@@ -1,5 +1,6 @@
 package com.ali.wzq;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -24,11 +25,13 @@ public class NacosApplication {
 		SpringApplication.run(NacosApplication.class, args);
 	}
 
+	@Value("${spring.cloud.nacos.discovery.server-addr}")
+	private String nacotport;
 	@RestController
 	public class EchoController {
 		@GetMapping(value = "/echo/{string}")
 		public String echo(@PathVariable String string) {
-			return "Hello Nacos Discovery " + string;
+			return "Hello Nacos Discovery " + string + nacotport;
 		}
 	}
 }

@@ -13,6 +13,7 @@
         <module>ALI-DAP-CONFIG</module>
         <module>ali-dap-sentinel</module>
         <module>ali-dap-cousumer</module>
+        <module>ali-dap-gateway</module>
     </modules>
 
     <!--统一管理jar包版本-->
