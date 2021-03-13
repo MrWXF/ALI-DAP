@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ali-dap-cousumer</artifactId>
+    <artifactId>ali-dap-provider</artifactId>
 
     <dependencies>
         <dependency>
@@ -28,15 +28,10 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-dubbo</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.ali.wzq</groupId>
-            <artifactId>ali-dap-provider</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.alibaba.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+        <!--        </dependency>-->
     </dependencies>
 
 </project>

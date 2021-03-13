@@ -14,6 +14,7 @@
         <module>ali-dap-sentinel</module>
         <module>ali-dap-cousumer</module>
         <module>ali-dap-gateway</module>
+        <module>ali-dap-provider</module>
     </modules>
 
     <!--统一管理jar包版本-->

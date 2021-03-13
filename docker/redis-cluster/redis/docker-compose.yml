@@ -1,0 +1,28 @@
+version: "3"
+services:
+  master:
+    image: redis:latest
+    container_name: my_redis_master
+    command: redis-server --requirepass root  # 在连接容器时需要密码
+    ports:
+      - 6379:6379
+  slave1:
+    image: redis:latest
+    depends_on:  # 这里目的是需要先启动master，随后再启动slave节点
+      - master
+    container_name: my_redis_slave1
+    command: redis-server --slaveof my_redis_master 6379 --requirepass root --masterauth root # 再容器启动后，通过这里命令来指定主节点ip地址
+    ports:
+      - 6380:6379
+  slave2:
+    image: redis:latest
+    depends_on:
+      - master
+    container_name: my_redis_slave2
+    ports:
+     - 6381:6379
+    command: redis-server --slaveof my_redis_master 6379 --requirepass root --masterauth root
+networks:   # 这里是配置网络环境，目的是让容器之间能够相互连接，如果不配置，哨兵将获取不到从节点的信息，并且无法转换master节点
+  default:
+    external:
+      name: redis_net
