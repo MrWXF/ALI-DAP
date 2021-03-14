@@ -13,4 +13,6 @@ import org.apache.dubbo.config.annotation.Service;
 public interface ProviderDemoService
 {
 	public String hello ();
+
+	public String redisTest();
 }
