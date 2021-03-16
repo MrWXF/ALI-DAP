@@ -18,6 +18,7 @@ import java.util.Random;
  * @Data 2021/3/12  12:05
  */
 @Service
+@org.springframework.stereotype.Service
 public class ProviderDemoServiceImpl implements ProviderDemoService
 {
 
@@ -37,11 +38,11 @@ public class ProviderDemoServiceImpl implements ProviderDemoService
 	@Override
 	public String redisTest() {
 //		long wzq = redisUtils.setSet("111", "wzq");
-		long timeOut = 300000L +  (long)(Math.random()* 10000);
-		redisUtils.setValueExpire("wzq", "wwwww", timeOut);
+		long timeOut = 3L;
+		redisUtils.setValueExpire("wzq1", "wwww22w", timeOut);
 //		if (wzq == 0){
 //
 //		}
-		return null;
+		return "null";
 	}
 }

@@ -13,7 +13,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @Data 2021/3/12  10:45
  */
 
-@SpringBootApplication(scanBasePackages = "com.ali.wzq")
+@SpringBootApplication
 @EnableDiscoveryClient
 public class AliDapProviderApplication
 {

@@ -1,0 +1,15 @@
+
+#Redis集群哨兵模式
+redisSentinel:
+  sentinelMaster: 192.168.1.110
+  masterName: mymaster
+  sentinelNodes: 192.168.1.110:26379,192.168.1.110:26380,192.168.1.110:26381
+  sentinelPort: 6379
+  maxIdle: 300
+  maxTotal: 1000
+  maxWaitMills: 1000
+  minEvictableIdleTimeMillis: 300000
+  numTestPerEvictionRun: 1024
+  timeBetweenEvictionRunMillis: 30000
+  testOnBorrow: true
+  testWhileIdle: true

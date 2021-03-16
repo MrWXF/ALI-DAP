@@ -27,7 +27,15 @@ public class RedisUtils {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 
+    public RedisTemplate<String, Object> getRedisTemplate()
+    {
+        return redisTemplate;
+    }
 
+    public void setRedisTemplate(RedisTemplate<String, Object> redisTemplate)
+    {
+        this.redisTemplate = redisTemplate;
+    }
 
     /**
      * 设置有效时间
