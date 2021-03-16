@@ -1,0 +1,22 @@
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# maven ignore
+target/
+!.mvn/wrapper/*
+*.war
+*.jar
+*.zip
+*.tar
+*.tar.gz
+.flattened-pom.xml
